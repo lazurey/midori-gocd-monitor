@@ -1,0 +1,31 @@
+body {
+  background: #e5e7ec;
+  font-family: 'Open Sans', Lato, Arial;
+  color: #363A46;
+}
+
+h1 {
+  font-weight: 900;
+  font-family: monospace;
+  font-size: 50px;
+  margin: 20px;
+  text-align: center;
+}
+
+h3 {
+  margin: 5px 0;
+  padding-left: 8px;
+  font-size: 1.5em;
+}
+
+footer {
+  text-align: center;
+  color: #868890;
+  font-size: 0.8em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

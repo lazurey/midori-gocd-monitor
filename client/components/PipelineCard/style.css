@@ -1,0 +1,15 @@
+.pipelineCard__passed {
+  background-color: #88CBA1;
+}
+
+.pipelineCard__failed {
+  background-color: #F95F49;
+}
+
+.pipelineCard__unknown {
+  background-color: #FFC141;
+}
+
+.pipelineCard__cancelled {
+  background-color: #9999A0;
+}
