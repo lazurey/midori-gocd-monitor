@@ -14,7 +14,8 @@ class PipelineCard extends Component {
 
   render() {
     const { name, group, pipelines } = this.props.pipeline
-    if (pipelines.length > 0) {
+
+    if (!!pipelines && pipelines.length > 0) {
       const validStage = pipelines[0].stages.filter(stage => !!stage.result)
       const status = (validStage.length > 0) ? (validStage[validStage.length - 1].result) : 'cancelled'
       return (

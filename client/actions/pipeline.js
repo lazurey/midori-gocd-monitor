@@ -1,7 +1,7 @@
 import { createAction } from 'redux-actions'
 
 import { fetchPipelineGroupInfo, fetchPipelineInfoByName } from '../api/pipeline'
-import { showError } from './errors'
+import { showError, hideError } from './errors'
 import config from '../config'
 
 export const LOAD_PIPELINE_GROUPS_DATA = 'load all pipeline data'
@@ -22,6 +22,7 @@ export function loadPipelineGroupData() {
   clearAllIntervals()
   return dispatch => fetchPipelineGroupInfo()
     .then((res) => {
+      dispatch(hideError())
       res.data.forEach((group) => {
         group.pipelines.forEach((pipeline) => {
           dispatch(loadPipelineInfoByGroupName(pipeline.name, group.name))
@@ -38,13 +39,14 @@ export function loadPipelineGroupData() {
       intervalArray.push(fetching)
     })
     .catch(() => {
-      dispatch(showError('Server Disconnected'))
+      dispatch(showError('GoCD Server Disconnected!'))
     })
 }
 
 export function loadPipelineInfoByGroupName(pipelineName, groupName) {
   return dispatch => fetchPipelineInfoByName(pipelineName)
     .then((res) => {
+      dispatch(hideError())
       dispatch(loadPipelineSuccess({
         name: pipelineName,
         group: groupName,
@@ -52,7 +54,7 @@ export function loadPipelineInfoByGroupName(pipelineName, groupName) {
       }))
     })
     .catch(() => {
-      dispatch(showError('Server Disconnected '))
+      dispatch(showError('GoCD Server Disconnected!'))
     })
 }
 

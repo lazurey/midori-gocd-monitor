@@ -1,34 +1,19 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 
-class ErrorMessage extends Component {
-  static propTypes = {
-    show: PropTypes.bool.isRequired,
-    message: PropTypes.string,
-    hideError: PropTypes.func.isRequired
-  }
+import style from './style.css'
 
-  constructor() {
-    super()
-    this._hideError = this._hideError.bind(this)
-  }
+const ErrorMessage = (props) => {
+  const { show, message } = props
+  return (
+    <div className={style.errorMessage} hidden={!show}>
+      { message }
+    </div>
+  )
+}
 
-  _hideError() {
-    this.props.hideError()
-  }
-
-  render() {
-    const { show, message } = this.props
-    return (
-      <div
-        active={show}
-        onActionClick={this._hideError}
-        onTimeout={this._hideError}
-        action="OK"
-      >
-        {message}
-      </div>
-    )
-  }
+ErrorMessage.propTypes = {
+  show: PropTypes.bool.isRequired,
+  message: PropTypes.string
 }
 
 export default ErrorMessage
