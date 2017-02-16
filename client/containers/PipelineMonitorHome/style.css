@@ -24,6 +24,15 @@ footer {
   font-size: 0.8em;
 }
 
+a {
+  text-decoration: none;
+  color: #18B394;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;

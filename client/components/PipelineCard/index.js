@@ -7,7 +7,7 @@ class PipelineCard extends Component {
     pipeline: PropTypes.object.isRequired,
   }
 
-  static _simplifyName(name, group) {
+  _simplifyName(name, group) {
     const splitted = name.split('-')
     return (group === 'defaultGroup' && splitted.length > 1) ? name : splitted[splitted.length - 1]
   }

@@ -31,7 +31,7 @@ class PipelineMonitorHome extends Component {
         </div>
         <ErrorMessage show={errors.show} message={errors.message} />
         <footer>
-          <p>© 2017 <a href="https://the-blackhole.github.io/" target="_blank" rel="noopener noreferrer">The Blackhole Studio</a></p>
+          <p>© 2017 <a href="https://the-blackhole.github.io/" target="_blank" rel="noopener noreferrer"> - The Blackhole Studio - </a></p>
         </footer>
       </div>
     )

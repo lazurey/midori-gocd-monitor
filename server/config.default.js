@@ -2,7 +2,8 @@
 // TDOO 2: Change file name to `config.js`
 
 export default {
-  apiServer: 'https://GOCD.SERVER.HOST/go/api',
-  username: 'GOCD_USER',
-  password: 'GOCD_PASS'
+  API_SERVER: 'https://GOCD.SERVER.HOST/go/api',
+  USERNAME: 'GOCD_USER',
+  PASSWORD: 'GOCD_PASS',
+  PORT: 3000
 }
