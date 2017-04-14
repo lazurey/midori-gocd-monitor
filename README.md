@@ -14,6 +14,9 @@ It aims to display **grouped pipeline** status with basic auto-refresh functiona
 
 ## Set up
 
+**IMPORTANT**
+Before start, please make sure you have `node`, `yarn`, `npm` and `babel-cli` installed globally.
+
 First time: `yarn install`, and update your configuration in `/server/config.js`.
 
 To start the monitor: `npm start`. It will build the clientside files and start the server at `localhost:3000`
